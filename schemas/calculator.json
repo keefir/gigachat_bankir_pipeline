@@ -1,0 +1,37 @@
+{
+  "name": "calculator",
+  "description": "Вычисляет арифметическое выражение. Поддерживаются операции +, -, *, /, // (целочисленное деление), % (остаток), ** (степень) и скобки.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "expression": {
+        "type": "string",
+        "description": "Арифметическое выражение, например \"(2 + 3) * 4\""
+      }
+    },
+    "required": ["expression"]
+  },
+  "return_parameters": {
+    "type": "object",
+    "properties": {
+      "result": {
+        "type": "string",
+        "description": "Результат вычисления"
+      },
+      "error": {
+        "type": "string",
+        "description": "Описание ошибки, если выражение не удалось вычислить"
+      }
+    }
+  },
+  "few_shot_examples": [
+    {
+      "request": "Сколько будет 2 + 2 * 2?",
+      "params": {"expression": "2 + 2 * 2"}
+    },
+    {
+      "request": "Посчитай 15% от 2400",
+      "params": {"expression": "2400 * 15 / 100"}
+    }
+  ]
+}

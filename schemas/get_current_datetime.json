@@ -1,0 +1,32 @@
+{
+  "name": "get_current_datetime",
+  "description": "Возвращает текущие дату и время пользователя. Используй, когда нужно узнать текущее время, дату или день недели.",
+  "parameters": {
+    "type": "object",
+    "properties": {}
+  },
+  "return_parameters": {
+    "type": "object",
+    "properties": {
+      "datetime": {
+        "type": "string",
+        "description": "Текущие дата и время в формате ISO 8601 с часовым поясом"
+      },
+      "weekday": {
+        "type": "string",
+        "description": "День недели на русском языке"
+      }
+    },
+    "required": ["datetime", "weekday"]
+  },
+  "few_shot_examples": [
+    {
+      "request": "Который сейчас час?",
+      "params": {}
+    },
+    {
+      "request": "Какое сегодня число?",
+      "params": {}
+    }
+  ]
+}

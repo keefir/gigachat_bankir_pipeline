@@ -1,0 +1,27 @@
+# Параметры модели и генерации. Закомментированный / пустой параметр — дефолт библиотеки.
+model:
+  name: GigaChat-3-Ultra          # GigaChat-2, GigaChat-2-Pro, GigaChat-2-Max, ...
+  temperature: 0.7
+  top_p: 0.9
+  max_tokens: 1024
+  repetition_penalty: 1.0
+  profanity_check: false
+  streaming: false
+  timeout: 60               # секунды
+
+# Промпты: пути к файлам относительно этого конфига
+prompts:
+  system: prompts/system.md
+
+pipeline:
+  # Максимальное число итераций "модель -> вызов тула -> модель"
+  max_tool_iterations: 5
+
+# Имена инструментов из папки tools/. Пустой список — тулы не подключаются.
+tools:
+  - get_current_datetime
+  - calculator
+
+# Папка со схемами инструментов в формате GigaChat (<имя тула>.json),
+# путь относительно этого конфига. Схема отправляется в GigaChat без изменений.
+tool_schemas_dir: schemas
