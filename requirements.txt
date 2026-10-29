@@ -1,4 +1,4 @@
-langchain-gigachat>=0.3
+langchain-gigachat>=0.5
 langchain-core>=0.3
 python-dotenv>=1.0
 pyyaml>=6.0
